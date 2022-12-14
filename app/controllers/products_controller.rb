@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
+    @emptyProduct = Product.select(:quantity).where(quantity: 0)
   end
 
 end
