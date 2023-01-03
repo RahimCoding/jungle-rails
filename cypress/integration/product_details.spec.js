@@ -1,4 +1,4 @@
-describe('home spec', () => {
+describe('product details spec', () => {
 
   it('visits the homepage', () => {
     cy.visit('/')
@@ -8,8 +8,8 @@ describe('home spec', () => {
     cy.get(".products article").should("be.visible");
   });
 
-  it("There is 2 products on the page", () => {
-    cy.get(".products article").should("have.length", 2);
+  it('should naviagate to the product detail page', () => {
+    cy.get('[alt="Scented Blade"]').click()
   });
 
 })
